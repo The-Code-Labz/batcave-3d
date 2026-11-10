@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BATCAVE // Home Tech Complex</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Pure-CSS state controls -->
+  <input type="radio" name="cam" id="cam-orbit" checked>
+  <input type="radio" name="cam" id="cam-over">
+  <input type="radio" name="cam" id="cam-low">
+  <input type="radio" name="cam" id="cam-racks">
+  <input type="radio" name="lights" id="lights-normal" checked>
+  <input type="radio" name="lights" id="lights-panic">
+
+  <div class="scene">
+    <div class="cave">
+      <div class="orbit">
+
+        <!-- ============ FLOOR / PIT ============ -->
+        <div class="floor"></div>
+        <div class="floor-grid"></div>
+        <div class="pit"></div>
+        <div class="pit-rim"></div>
+        <div class="pit-glow"></div>
+        <div class="fog f1"></div>
+        <div class="fog f2"></div>
+
+        <!-- ============ CEILING + DUCTS ============ -->
+        <div class="ceiling"></div>
+        <div class="duct-group duct-a">
+          <div class="d-top"></div><div class="d-bot"></div>
+          <div class="d-side d-sa"></div><div class="d-side d-sb"></div>
+        </div>
+        <div class="duct-group duct-b">
+          <div class="d-top"></div><div class="d-bot"></div>
+          <div class="d-side d-sa"></div><div class="d-side d-sb"></div>
+        </div>
+        <div class="cable c1"></div>
+        <div class="cable c2"></div>
+        <div class="cable c3"></div>
+
+        <!-- ============ BACK WALL ============ -->
+        <div class="wall wall-back">
+          <div class="wp wp-a"></div><div class="wp wp-b"></div>
+          <div class="wp wp-c"></div><div class="wp wp-d"></div>
+          <div class="bat-emblem">
+            <div class="emblem-ring"></div>
+            <div class="bat bat-wall"></div>
+            <div class="emblem-text">WAYNE&nbsp;INDUSTRIES</div>
+            <div class="emblem-sub">HOME&nbsp;TECH&nbsp;COMPLEX</div>
+          </div>
+          <div class="vents"><span></span><span></span><span></span><span></span></div>
+        </div>
+
+        <!-- ============ LEFT WALL: MONITOR WALL ============ -->
+        <div class="wall wall-left">
+          <div class="wall-label">SURVEILLANCE ARRAY // SECTOR 4</div>
+          <div class="mscreen m-cctv">
+            <div class="ms-title">CCTV-07 · GOTHAM HARBOR</div>
+            <div class="ms-canvas"></div>
+            <div class="crosshair"></div>
+            <div class="ms-rec">● REC</div>
+          </div>
+          <div class="m-grid">
+            <div class="mscreen"><div class="ms-title">FEED 01</div><div class="ms-canvas g1"></div></div>
+            <div class="mscreen"><div class="ms-title">FEED 02</div><div class="ms-canvas g2"></div></div>
+            <div class="mscreen"><div class="ms-title">FEED 03</div><div class="ms-canvas g3"></div></div>
+            <div class="mscreen"><div class="ms-title">FEED 04</div><div class="ms-canvas g4"></div></div>
+            <div class="mscreen"><div class="ms-title">FEED 05</div><div class="ms-canvas g2"></div></div>
+            <div class="mscreen"><div class="ms-title">FEED 06</div><div class="ms-canvas g1"></div></div>
+            <div class="mscreen"><div class="ms-title">FEED 07</div><div class="ms-canvas g3"></div></div>
+            <div class="mscreen"><div class="ms-title">FEED 08</div><div class="ms-canvas g4"></div></div>
+          </div>
+          <div class="pipe-row"></div>
+        </div>
+
+        <!-- ============ RIGHT WALL: SERVER RACKS ============ -->
+        <div class="wall wall-right">
+          <div class="wall-label">PRIMARY DATA CORE // COLD STORAGE</div>
+          <div class="wall-stripe ws-a"></div>
+          <div class="wall-stripe ws-b"></div>
+        </div>
+
+        <!-- Racks (3D boxes along the right wall) -->
+        <div class="rack" style="--rz:-330px">
+          <div class="rk-front"><div class="led-col lc1"></div><div class="led-col lc2"></div><div class="led-strip ls1"></div><div class="led-strip ls2"></div><div class="rk-label">CORE-01</div></div>
+          <div class="rk-back"></div>
+          <div class="rk-top"></div>
+        </div>
+        <div class="rack" style="--rz:-165px">
+          <div class="rk-front"><div class="led-col lc1"></div><div class="led-col lc2"></div><div class="led-strip ls2"></div><div class="led-strip ls1"></div><div class="rk-label">CORE-02</div></div>
+          <div class="rk-back"></div>
+          <div class="rk-top"></div>
+        </div>
+        <div class="rack" style="--rz:0px">
+          <div class="rk-front"><div class="led-col lc1"></div><div class="led-col lc2"></div><div class="led-strip ls1"></div><div class="led-strip ls2"></div><div class="rk-label">CORE-03</div></div>
+          <div class="rk-back"></div>
+          <div class="rk-top"></div>
+        </div>
+        <div class="rack" style="--rz:165px">
+          <div class="rk-front"><div class="led-col lc2"></div><div class="led-col lc1"></div><div class="led-strip ls2"></div><div class="led-strip ls1"></div><div class="rk-label">CORE-04</div></div>
+          <div class="rk-back"></div>
+          <div class="rk-top"></div>
+        </div>
+
+        <!-- ============ MAIN CONSOLE (BATCOMPUTER) ============ -->
+        <div class="console">
+          <div class="desk-top"></div>
+          <div class="desk-front"></div>
+          <div class="desk-side ds-l"></div>
+          <div class="desk-side ds-r"></div>
+          <div class="desk-skirt"></div>
+
+          <div class="scr scr-c">
+            <div class="scr-title">GOTHAM CITY GRID · LIVE</div>
+            <div class="scr-map"></div>
+            <div class="scr-status">
+              <span>REACTOR&nbsp;····&nbsp;98.2%</span>
+              <span>GRID&nbsp;······&nbsp;SECURE</span>
+              <span>SAT-LINK&nbsp;·&nbsp;NOMINAL</span>
+            </div>
+            <div class="scanband"></div>
+          </div>
+          <div class="scr scr-l">
+            <div class="scr-title">SIGNAL ANALYSIS</div>
+            <div class="eq">
+              <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+            </div>
+            <div class="scr-status"><span>ENCRYPTED CHANNEL 44</span><span>HANDSHAKE: VERIFIED</span></div>
+            <div class="scanband"></div>
+          </div>
+          <div class="scr scr-r">
+            <div class="scr-title">THREAT MATRIX</div>
+            <div class="threat">
+              <div class="t-bar"><b style="--w:82%">JOKER</b><em></em></div>
+              <div class="t-bar"><b style="--w:54%">RIDDLER</b><em></em></div>
+              <div class="t-bar"><b style="--w:31%">CATWOMAN</b><em></em></div>
+              <div class="t-bar"><b style="--w:67%">BANE</b><em></em></div>
+              <div class="t-bar"><b style="--w:12%">PINGUIN</b><em></em></div>
+            </div>
+            <div class="scanband"></div>
+          </div>
+
+          <div class="emitter"></div>
+          <div class="holo">
+            <div class="holo-bat"></div>
+            <div class="holo-cube">
+              <span class="h-face hf-1"></span><span class="h-face hf-2"></span>
+              <span class="h-face hf-3"></span><span class="h-face hf-4"></span>
+              <span class="h-face hf-5"></span><span class="h-face hf-6"></span>
+            </div>
+            <div class="holo-ring hr-1"></div>
+            <div class="holo-ring hr-2"></div>
+            <div class="holo-ring hr-3"></div>
+            <div class="holo-base"></div>
+            <div class="holo-beam"></div>
+          </div>
+        </div>
+
+        <!-- ============ BATMOBILE BAY ============ -->
+        <div class="pad"></div>
+        <div class="pad-rings"></div>
+        <div class="cone"></div>
+        <div class="batmobile">
+          <div class="bm-body">
+            <span class="bm-face bm-top"></span>
+            <span class="bm-face bm-front"></span>
+            <span class="bm-face bm-back"></span>
+            <span class="bm-face bm-side bm-sl"></span>
+            <span class="bm-face bm-side bm-sr"></span>
+          </div>
+          <div class="bm-canopy">
+            <span class="bm-face bm-c-top"></span>
+            <span class="bm-face bm-c-front"></span>
+            <span class="bm-face bm-c-back"></span>
+            <span class="bm-face bm-c-side bm-cl"></span>
+            <span class="bm-face bm-c-side bm-cr"></span>
+          </div>
+          <div class="bm-fin bm-fl"></div>
+          <div class="bm-fin bm-fr"></div>
+          <div class="bm-glowline"></div>
+        </div>
+
+      </div><!-- /orbit -->
+    </div><!-- /cave -->
+  </div><!-- /scene -->
+
+  <!-- ============ HUD OVERLAY ============ -->
+  <div class="hud">
+    <div class="corner c-tl"></div><div class="corner c-tr"></div>
+    <div class="corner c-bl"></div><div class="corner c-br"></div>
+
+    <div class="hud-tl">
+      <div class="hud-title">BATCAVE // HOME TECH COMPLEX</div>
+      <div class="hud-sub">WAYNE ESTATE · LEVEL B-9 · CLASSIFIED</div>
+      <div class="hud-sub">CLEARANCE: OMEGA · <span class="blink">ENCRYPTED LINK ACTIVE</span></div>
+    </div>
+
+    <div class="hud-tr">
+      <div class="clock"><span class="ch"></span>:<span class="cm"></span>:<span class="cs"></span></div>
+      <div class="hud-sub">GOTHAM STANDARD TIME</div>
+      <div class="hud-sub">PWR CORE <span class="ok">▲ 98.2%</span></div>
+    </div>
+
+    <div class="hud-bl">
+      <div class="stat"><i class="dot ok"></i>DEFENSE GRID <b>ARMED</b></div>
+      <div class="stat"><i class="dot ok"></i>COMMS ARRAY <b>ONLINE</b></div>
+      <div class="stat"><i class="dot warn"></i>PERIMETER SENSORS <b>4 FAULTS</b></div>
+      <div class="stat"><i class="dot ok"></i>VEHICLE BAY <b>SECURED</b></div>
+    </div>
+
+    <div class="hud-eq">
+      <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+      <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+    </div>
+
+    <div class="hud-br">
+      <div class="cam-labels">
+        <label for="cam-orbit">ORBIT</label>
+        <label for="cam-over">OVERHEAD</label>
+        <label for="cam-low">LOW ANGLE</label>
+        <label for="cam-racks">CORE RACKS</label>
+      </div>
+      <div class="light-labels">
+        <label for="lights-normal">STANDBY</label>
+        <label for="lights-panic">PANIC</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="scanlines"></div>
+  <div class="vignette"></div>
+
+</body>
+</html>
